@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WES PERÚ - Marcar Asistencia</title>
+    <link rel="stylesheet" href="/assets/styes/asistenciastyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/images/logo-wes.png" alt="WES PERÚ Logo">
+            </div>
+            <div class="user-menu">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="user-info">
+                    <span>Misael Challco</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/api/placeholder/35/35" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="main.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="MarcarAsistencia.html">
+                    <i class="fas fa-clock"></i>
+                    <span>Marcar Asistencia</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="historial.html">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Mi Historial</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="reportes.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reportes</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="configuracion.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </a>            
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="cerrarsesion">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>    
+                </a>        
+            </li>
+        </ul>
+    </aside>
+    
+    <main class="main-content">
+        <h1 class="page-title">Marcar Asistencia</h1>
+        <p class="page-subtitle">Registra tu entrada y salida del día</p>
+        
+        <div class="attendance-clock-container">
+            <div class="attendance-clock">
+                <h2>Control de Asistencia</h2>
+                <div class="current-time-display">09:45:32</div>
+                <div class="current-date">Lunes, 21 de Abril de 2025</div>
+                
+                <div class="attendance-action">
+                    <!-- Show this button if entry was already registered -->
+                    <button class="attendance-button check-out">
+                        <i class="fas fa-sign-out-alt"></i> Marcar Salida
+                    </button>
+                    
+                    <!-- Show this button if entry was not registered yet -->
+                    <!-- <button class="attendance-button">
+                        <i class="fas fa-sign-in-alt"></i> Marcar Entrada
+                    </button> -->
+                </div>
+                
+                <div class="connection-status">
+                    <div class="status-indicator indicator-online"></div>
+                    <span>Conectado a Red Corporativa (Oficina)</span>
+                </div>
+                
+                <div class="status-message">
+                    <i class="fas fa-check-circle"></i> Entrada registrada correctamente a las 08:30 AM
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-info">
+            <div class="status-card">
+                <div class="status-card-title">
+                    <i class="fas fa-info-circle"></i> Información de Asistencia
+                </div>
+                <div class="status-info-grid">
+                    <div class="status-info-item">
+                        <div class="status-info-label">Estado Actual</div>
+                        <div class="status-info-value">Presente (Oficina)</div>
+                    </div>
+                    <div class="status-info-item">
+                        <div class="status-info-label">Hora de Entrada</div>
+                        <div class="status-info-value">08:30 AM</div>
+                    </div>
+                    <div class="status-info-item">
+                        <div class="status-info-label">Hora de Salida</div>
+                        <div class="status-info-value">Pendiente</div>
+                    </div>
+                    <div class="status-info-item">
+                        <div class="status-info-label">Tiempo Trabajado</div>
+                        <div class="status-info-value">1h 15m</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-history">
+            <h2 class="history-title">Registro de Asistencia - Esta Semana</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                        <th>Horas</th>
+                        <th>Modalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>21/04/2025 (Hoy)</td>
+                        <td>08:30 AM</td>
+                        <td>Pendiente</td>
+                        <td>1h 15m</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>20/04/2025</td>
+                        <td>08:45 AM</td>
+                        <td>06:15 PM</td>
+                        <td>9h 30m</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>19/04/2025</td>
+                        <td>09:00 AM</td>
+                        <td>05:45 PM</td>
+                        <td>8h 45m</td>
+                        <td>Remoto (VPN)</td>
+                    </tr>
+                    <tr>
+                        <td>18/04/2025</td>
+                        <td>08:30 AM</td>
+                        <td>06:00 PM</td>
+                        <td>9h 30m</td>
+                        <td>Remoto (VPN)</td>
+                    </tr>
+                    <tr>
+                        <td>17/04/2025</td>
+                        <td>08:15 AM</td>
+                        <td>05:30 PM</td>
+                        <td>9h 15m</td>
+                        <td>Presencial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

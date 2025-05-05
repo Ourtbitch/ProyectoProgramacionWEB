@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WES PERÚ - Dashboard</title>
+    <link rel="stylesheet" href="/assets/styes/stylemain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/images/logo-wes.png" alt="WES PERÚ Logo">
+            </div>
+            <div class="user-menu">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="user-info">
+                    <span>Misael Challco</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/api/placeholder/35/35" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+    <ul class="sidebar-menu">
+        <li class="sidebar-menu-item active">
+            <a href="main.html">
+                <div class="menu-item-content">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="MarcarAsistencia.html">
+                <div class="menu-item-content">
+                    <i class="fas fa-clock"></i>
+                    <span>Marcar Asistencia</span>
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="historial.html">
+                <div class="menu-item-content">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Mi Historial</span>
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="reportes.html">
+                <div class="menu-item-content">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reportes</span>
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="configuracion.html">
+                <div class="menu-item-content">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-menu-item">
+            <a href="cerrarsesion">
+                <div class="menu-item-content">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</aside>
+    
+    <main class="main-content">
+        <h1 class="page-title">Dashboard</h1>
+        <p class="page-subtitle">Bienvenido, Carlos. Aquí está tu resumen de asistencia</p>
+        
+        <div class="current-time">
+            <i class="far fa-clock"></i> Lunes, 21 de Abril de 2025 | 09:45:32 AM
+        </div>
+        
+        <div class="connection-status">
+            <div class="status-indicator indicator-online"></div>
+            <span>Conectado a Red Corporativa (Oficina)</span>
+        </div>
+        
+        <div class="quick-actions">
+            <button class="action-btn active">
+                <i class="fas fa-sign-in-alt"></i> Entrada Registrada (08:30 AM)
+            </button>
+            <button class="action-btn">
+                <i class="fas fa-sign-out-alt"></i> Marcar Salida
+            </button>
+            <button class="action-btn">
+                <i class="fas fa-file-alt"></i> Solicitar Permiso
+            </button>
+        </div>
+        
+        <div class="dashboard-cards">
+            <div class="card">
+                <div class="card-title">
+                    <span>Estado Actual</span>
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="card-content">Presente</div>
+                <div class="card-footer">Modalidad: Presencial (Oficina)</div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <span>Horas Trabajadas Hoy</span>
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <div class="card-content">1h 15m</div>
+                <div class="card-footer">De 8 horas programadas</div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <span>Tu Asistencia Mensual</span>
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="card-content">100%</div>
+                <div class="card-footer">21/21 días asistidos</div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <span>Compañeros en Línea</span>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="card-content">24/30</div>
+                <div class="card-footer">14 presenciales | 10 remotos</div>
+            </div>
+        </div>
+        
+        <div class="card table-card">
+            <div class="card-title">
+                <span>Registro de Asistencia - Últimos 5 días</span>
+                <i class="fas fa-history"></i>
+            </div>
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                        <th>Horas</th>
+                        <th>Modalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>21/04/2025 (Hoy)</td>
+                        <td><span class="attendance-status status-present">Presente</span></td>
+                        <td>08:30 AM</td>
+                        <td>En curso</td>
+                        <td>1h 15m</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>20/04/2025</td>
+                        <td><span class="attendance-status status-present">Presente</span></td>
+                        <td>08:45 AM</td>
+                        <td>06:15 PM</td>
+                        <td>9h 30m</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>19/04/2025</td>
+                        <td><span class="attendance-status status-remote">Remoto</span></td>
+                        <td>09:00 AM</td>
+                        <td>05:45 PM</td>
+                        <td>8h 45m</td>
+                        <td>Remoto (VPN)</td>
+                    </tr>
+                    <tr>
+                        <td>18/04/2025</td>
+                        <td><span class="attendance-status status-remote">Remoto</span></td>
+                        <td>08:30 AM</td>
+                        <td>06:00 PM</td>
+                        <td>9h 30m</td>
+                        <td>Remoto (VPN)</td>
+                    </tr>
+                    <tr>
+                        <td>17/04/2025</td>
+                        <td><span class="attendance-status status-present">Presente</span></td>
+                        <td>08:15 AM</td>
+                        <td>05:30 PM</td>
+                        <td>9h 15m</td>
+                        <td>Presencial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card table-card" style="margin-top: 30px;">
+            <div class="card-title">
+                <span>Equipo - Estado Actual</span>
+                <i class="fas fa-user-friends"></i>
+            </div>
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Empleado</th>
+                        <th>Estado</th>
+                        <th>Entrada</th>
+                        <th>Modalidad</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="employee-name">
+                                <div class="employee-avatar">
+                                    <img src="/api/placeholder/30/30" alt="Employee">
+                                </div>
+                                <span>Ana Sánchez</span>
+                            </div>
+                        </td>
+                        <td><span class="attendance-status status-present">Presente</span></td>
+                        <td>08:30 AM</td>
+                        <td>Presencial</td>
+                        <td>Consultoría</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="employee-name">
+                                <div class="employee-avatar">
+                                    <img src="/api/placeholder/30/30" alt="Employee">
+                                </div>
+                                <span>Carlos Martínez</span>
+                            </div>
+                        </td>
+                        <td><span class="attendance-status status-remote">Conectado</span></td>
+                        <td>08:45 AM</td>
+                        <td>Remoto (VPN)</td>
+                        <td>Técnico</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="employee-name">
+                                <div class="employee-avatar">
+                                    <img src="/api/placeholder/30/30" alt="Employee">
+                                </div>
+                                <span>Luis Gómez</span>
+                            </div>
+                        </td>
+                        <td><span class="attendance-status status-present">Presente</span></td>
+                        <td>09:00 AM</td>
+                        <td>Presencial</td>
+                        <td>Administración</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="employee-name">
+                                <div class="employee-avatar">
+                                    <img src="/api/placeholder/30/30" alt="Employee">
+                                </div>
+                                <span>María Rodríguez</span>
+                            </div>
+                        </td>
+                        <td><span class="attendance-status status-absent">Ausente</span></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Consultoría</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
