@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - WES PERÚ Sistema de Asistencia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/styes/reportes.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/images/logo-wes.png" alt="WES PERÚ Logo">
+            </div>
+            <div class="user-menu">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="user-info">
+                    <span>Misael Challco</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/api/placeholder/35/35" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="main.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="MarcarAsistencia.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-clock"></i>
+                        <span>Marcar Asistencia</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="historial.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Mi Historial</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="reportes.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reportes</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="Configuracion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="CerrarSesion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Reportes de Asistencia</h1>
+            <p class="page-subtitle">Genera y visualiza reportes detallados de asistencia del personal</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <h2 class="filters-title"><i class="fas fa-filter"></i> Filtros de Reporte</h2>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="filter-label">Departamento</label>
+                    <select class="filter-input">
+                        <option value="">Todos los departamentos</option>
+                        <option value="consultoria">Consultoría</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="administracion">Administración</option>
+                        <option value="recursos-humanos">Recursos Humanos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Empleado</label>
+                    <select class="filter-input">
+                        <option value="">Todos los empleados</option>
+                        <option value="1">Ana Sánchez</option>
+                        <option value="2">Carlos Martínez</option>
+                        <option value="3">Luis Gómez</option>
+                        <option value="4">María Rodríguez</option>
+                        <option value="5">Pedro López</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Fecha Desde</label>
+                    <input type="date" class="filter-input" value="2025-05-01">
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Fecha Hasta</label>
+                    <input type="date" class="filter-input" value="2025-05-25">
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Modalidad</label>
+                    <select class="filter-input">
+                        <option value="">Todas las modalidades</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="remoto">Remoto (VPN)</option>
+                        <option value="hibrido">Híbrido</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Estado</label>
+                    <select class="filter-input">
+                        <option value="">Todos los estados</option>
+                        <option value="presente">Presente</option>
+                        <option value="ausente">Ausente</option>
+                        <option value="tardanza">Con Tardanza</option>
+                        <option value="salida-temprana">Salida Temprana</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="btn btn-primary"><i class="fas fa-search"></i> Generar Reporte</button>
+                <button class="btn btn-secondary"><i class="fas fa-eraser"></i> Limpiar Filtros</button>
+                <button class="btn btn-success"><i class="fas fa-download"></i> Exportar Excel</button>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card card-employees">
+                <div class="summary-icon" style="color: var(--primary);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="summary-value">30</div>
+                <div class="summary-label">Total Empleados</div>
+            </div>
+            <div class="summary-card card-present">
+                <div class="summary-icon" style="color: var(--success);">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="summary-value">24</div>
+                <div class="summary-label">Presentes Hoy</div>
+            </div>
+            <div class="summary-card card-remote">
+                <div class="summary-icon" style="color: var(--info);">
+                    <i class="fas fa-laptop-house"></i>
+                </div>
+                <div class="summary-value">14</div>
+                <div class="summary-label">Trabajo Remoto</div>
+            </div>
+            <div class="summary-card card-absent">
+                <div class="summary-icon" style="color: var(--danger);">
+                    <i class="fas fa-user-times"></i>
+                </div>
+                <div class="summary-value">6</div>
+                <div class="summary-label">Ausentes</div>
+            </div>
+            <div class="summary-card card-hours">
+                <div class="summary-icon" style="color: var(--warning);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="summary-value">1,248</div>
+                <div class="summary-label">Horas Trabajadas (Mes)</div>
+            </div>
+        </div>
+
+        <!-- Reports Table -->
+        <div class="reports-section">
+            <div class="reports-header">
+                <h2 class="reports-title"><i class="fas fa-table"></i> Reporte Detallado de Asistencia</h2>
+                <div class="export-actions">
+                    <button class="btn-outline"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <button class="btn-outline"><i class="fas fa-file-excel"></i> Excel</button>
+                    <button class="btn-outline"><i class="fas fa-file-csv"></i> CSV</button>
+                    <button class="btn-outline"><i class="fas fa-print"></i> Imprimir</button>
+                </div>
+            </div>
+            <table class="reports-table">
+                <thead>
+                    <tr>
+                        <th>Empleado</th>
+                        <th>Departamento</th>
+                        <th>Fecha</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                        <th>Horas Trabajadas</th>
+                        <th>Modalidad</th>
+                        <th>Estado</th>
+                        <th>Asistencia %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ana Sánchez</strong></td>
+                        <td>Consultoría</td>
+                        <td>25/05/2025</td>
+                        <td>08:30 AM</td>
+                        <td>05:45 PM</td>
+                        <td>9h 15m</td>
+                        <td>Presencial</td>
+                        <td><span class="status-badge status-present">Presente</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-excellent" style="width: 95%"></div>
+                            </div>
+                            95%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Carlos Martínez</strong></td>
+                        <td>Técnico</td>
+                        <td>25/05/2025</td>
+                        <td>08:45 AM</td>
+                        <td>06:00 PM</td>
+                        <td>9h 15m</td>
+                        <td>Remoto (VPN)</td>
+                        <td><span class="status-badge status-remote">Remoto</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-good" style="width: 88%"></div>
+                            </div>
+                            88%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Luis Gómez</strong></td>
+                        <td>Administración</td>
+                        <td>25/05/2025</td>
+                        <td>09:15 AM</td>
+                        <td>05:30 PM</td>
+                        <td>8h 15m</td>
+                        <td>Presencial</td>
+                        <td><span class="status-badge status-partial">Tardanza</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-warning" style="width: 82%"></div>
+                            </div>
+                            82%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>María Rodríguez</strong></td>
+                        <td>Recursos Humanos</td>
+                        <td>25/05/2025</td>
+                        <td>--:--</td>
+                        <td>--:--</td>
+                        <td>0h 00m</td>
+                        <td>--</td>
+                        <td><span class="status-badge status-absent">Ausente</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-danger" style="width: 65%"></div>
+                            </div>
+                            65%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pedro López</strong></td>
+                        <td>Consultoría</td>
+                        <td>25/05/2025</td>
+                        <td>08:20 AM</td>
+                        <td>05:50 PM</td>
+                        <td>9h 30m</td>
+                        <td>Híbrido</td>
+                        <td><span class="status-badge status-present">Presente</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-excellent" style="width: 92%"></div>
+                            </div>
+                            92%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sofia Herrera</strong></td>
+                        <td>Técnico</td>
+                        <td>25/05/2025</td>
+                        <td>08:35 AM</td>
+                        <td>04:30 PM</td>
+                        <td>7h 55m</td>
+                        <td>Remoto (VPN)</td>
+                        <td><span class="status-badge status-partial">Salida Temprana</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-warning" style="width: 78%"></div>
+                            </div>
+                            78%
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <a href="#" class="pagination-btn"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn">4</a>
+                <a href="#" class="pagination-btn">5</a>
+                <a href="#" class="pagination-btn"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <div class="chart-card">
+                <h3 class="chart-title"><i class="fas fa-chart-line"></i> Tendencia de Asistencia (Últimos 30 días)</h3>
+                <div class="chart-placeholder">
+                    <i class="fas fa-chart-line" style="font-size: 48px; margin-bottom: 10px;"></i>
+                        <span>Gráfico de datos de asistencia.</span>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title"><i class="fas fa-chart-pie"></i> Asistencia por Modalidad (Mes Actual)</h3>
+                <div class="chart-placeholder">
+                    <i class="fas fa-chart-pie" style="font-size: 48px; margin-bottom: 10px;"></i>
+                    <span>Gráfico de datos de modalidad.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html> 
