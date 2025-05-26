@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WES PERÚ - Configuración</title>
+    <link rel="stylesheet" href="/assets/styes/configuracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/images/logo-wes.png" alt="WES PERÚ Logo">
+            </div>
+            <div class="user-menu">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="user-info">
+                    <span>Misael Challco</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/api/placeholder/35/35" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="main.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="MarcarAsistencia.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-clock"></i>
+                        <span>Marcar Asistencia</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="historial.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Mi Historial</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="reportes.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reportes</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="Configuracion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="CerrarSesion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <main class="main-content">
+        <h1 class="page-title">Configuración</h1>
+        <p class="page-subtitle">Personaliza tu experiencia en el sistema</p>
+        
+        <div class="settings-container">
+            <div class="card">
+                <div class="card-title">
+                    <span>Preferencias de Usuario</span>
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="language">Idioma</label>
+                        <select id="language" class="form-control">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="theme">Tema</label>
+                        <select id="theme" class="form-control">
+                            <option value="light">Claro</option>
+                            <option value="dark">Oscuro</option>
+                            <option value="system">Sistema</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked> Recibir notificaciones por correo
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked> Mostrar recordatorios de asistencia
+                        </label>
+                    </div>
+                    
+                    <button class="action-btn">
+                        <i class="fas fa-save"></i> Guardar Cambios
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <span>Seguridad</span>
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label>Cambiar contraseña</label>
+                        <button class="action-btn">
+                            <i class="fas fa-key"></i> Actualizar Contraseña
+                        </button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Autenticación de dos factores</label>
+                        <div class="two-factor-status">
+                            <span class="status-badge inactive">Inactivo</span>
+                            <button class="action-btn small">
+                                <i class="fas fa-lock"></i> Activar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <span>Dispositivos conectados</span>
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="devices-list">
+                    <div class="device-item">
+                        <div class="device-info">
+                            <i class="fas fa-desktop"></i>
+                            <div>
+                                <strong>Windows 10 - Chrome</strong>
+                                <span>Último acceso: hoy a las 09:45 AM</span>
+                            </div>
+                        </div>
+                        <button class="action-btn small danger">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                        </button>
+                    </div>
+                    
+                    <div class="device-item">
+                        <div class="device-info">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <strong>Android - Firefox</strong>
+                                <span>Último acceso: ayer a las 07:30 PM</span>
+                            </div>
+                        </div>
+                        <button class="action-btn small danger">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

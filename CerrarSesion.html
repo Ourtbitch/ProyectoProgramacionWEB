@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WES PERÚ - Cerrar Sesión</title>
+    <link rel="stylesheet" href="/assets/styes/cerrarsesion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/assets/images/logo-wes.png" alt="WES PERÚ Logo">
+            </div>
+            <div class="user-menu">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="user-info">
+                    <span>Misael Challco</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="/api/placeholder/35/35" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                <a href="main.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="MarcarAsistencia.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-clock"></i>
+                        <span>Marcar Asistencia</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="historial.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Mi Historial</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="reportes.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reportes</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a href="Configuracion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="CerrarSesion.html">
+                    <div class="menu-item-content">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <main class="main-content">
+        <h1 class="page-title">Cerrar Sesión</h1>
+        <p class="page-subtitle">¿Estás seguro que deseas salir del sistema?</p>
+        
+        <div class="logout-container">
+            <div class="card logout-card">
+                <div class="card-title">
+                    <span>Confirmar Cierre de Sesión</span>
+                    <i class="fas fa-door-open"></i>
+                </div>
+                
+                <div class="logout-content">
+                    <div class="logout-message">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Al cerrar sesión, serás redirigido a la página de inicio y deberás ingresar tus credenciales nuevamente para acceder al sistema.</p>
+                    </div>
+                    
+                    <div class="logout-device-info">
+                        <div class="device-info">
+                            <i class="fas fa-desktop"></i>
+                            <div>
+                                <strong>Sesión actual</strong>
+                                <span>Windows 10 - Chrome | Última actividad: hoy a las 09:45 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="logout-options">
+                        <button class="action-btn danger" id="confirm-logout">
+                            <i class="fas fa-sign-out-alt"></i> Sí, cerrar sesión
+                        </button>
+                        <button class="action-btn" id="cancel-logout">
+                            <i class="fas fa-times"></i> Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card security-tips">
+                <div class="card-title">
+                    <span>Consejos de Seguridad</span>
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <ul class="tips-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>No compartas tus credenciales con nadie</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cierra sesión siempre que uses un dispositivo compartido</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cambia tu contraseña periódicamente</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Activa la autenticación de dos factores</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('confirm-logout').addEventListener('click', function() {
+            // Aquí iría la lógica para cerrar sesión
+            alert('Sesión cerrada correctamente. Redirigiendo...');
+            window.location.href = 'login.html';
+        });
+        
+        document.getElementById('cancel-logout').addEventListener('click', function() {
+            window.location.href = 'main.html';
+        });
+    </script>
+</body>
+</html>
